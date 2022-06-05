@@ -1,0 +1,13 @@
+language: android
+
+# https://docs.travis-ci.com/user/languages/android/
+# https://developer.android.com/studio/releases/build-tools
+# XXX: keep min & max versions in sync with `./app/build.gradle`
+android:
+  components:
+    - android-28
+    - platform-tools
+    - tools
+
+before_install:
+  - yes | sdkmanager "build-tools;29.0.2"
